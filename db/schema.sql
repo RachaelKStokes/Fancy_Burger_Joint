@@ -24,7 +24,7 @@ CREATE TABLE event (
   name VARCHAR(100),
     date DATE,
     time TIME,
-    location VARCHAR(100),
+    location VARCHAR(100)
 );
 
 CREATE TABLE reservation (
