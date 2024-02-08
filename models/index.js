@@ -1,6 +1,34 @@
 const User = require('./User');
 const Menu = require('./Menu');
 const Event = require('./Event');
+const Reservation = require('./Reservation');
+
+User.hasMany(Reservation, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Reservation.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Menu.hasMany(Reservation, {
+  foreignKey: 'menu_id',
+  onDelete: 'CASCADE'
+});
+
+Reservation.belongsTo(Menu, {
+  foreignKey: 'menu_id'
+});
+
+Event.hasMany(Reservation, {
+  foreignKey: 'event_id',
+  onDelete: 'CASCADE'
+});
+
+Reservation.belongsTo(Event, {
+  foreignKey: 'event_id'
+});
 
 User.hasMany(Event, {
   foreignKey: 'user_id',
@@ -20,4 +48,11 @@ Menu.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Menu, Event };
+
+
+module.exports = { 
+  User,
+  Menu,
+  Event,
+  Reservation,
+};
