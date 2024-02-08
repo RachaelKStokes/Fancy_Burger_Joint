@@ -55,7 +55,7 @@ module.exports = {
     }
   },
 
-  async deleteUser(req, res) {
+  async deleteEvent(req, res) {
     try {
       const { id } = req.params;
       const event = await Event.findByPk(id);
