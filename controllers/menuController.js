@@ -1,7 +1,7 @@
 const Menu = require('../models/Menu');
 
 module.exports = {
-    async getAllGalleries(req, res) {
+  async getAllGalleries(req, res) {
     try {
       const menus = await Menu.findAll();
       res.json(menus);
