@@ -1,7 +1,7 @@
 const Reservation = require('../models/Reservation');
 
 module.exports = {
-  getAllReservations: async (req, res) => {
+  async getAllReservations(req, res) {
     try {
       const reservations = await Reservation.findAll();
       res.json(reservations);
@@ -11,7 +11,7 @@ module.exports = {
     }
   },
 
-  getReservationById: async (req, res) => {
+  async getReservationById(req, res) {
     try {
       const { id } = req.params;
       const reservation = await Reservation.findByPk(id);
@@ -25,7 +25,7 @@ module.exports = {
     }
   },
 
-  createReservation: async (req, res) => {
+  async createReservation(req, res) {
     try {
       const { reservation_date, reservation_time, reservation_guests } = req.body;
       const reservation = await Reservation.create({ reservation_date, reservation_time, reservation_guests });
@@ -36,7 +36,7 @@ module.exports = {
     }
   },
 
-  updateReservation: async (req, res) => {
+  async updateReservation(req, res) {
     try {
       const { id } = req.params;
       const { reservation_date, reservation_time, reservation_guests } = req.body;
@@ -55,7 +55,7 @@ module.exports = {
     }
   },
 
-  deleteReservation: async (req, res) => {
+  async deleteReservation(req, res) {
     try {
       const { id } = req.params;
       const reservation = await Reservation.findByPk(id);

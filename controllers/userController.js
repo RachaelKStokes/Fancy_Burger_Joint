@@ -11,7 +11,7 @@ module.exports = {
     }
   },
 
- async getUserById(req, res) {
+  async getUserById(req, res) {
     try {
       const { id } = req.params;
       const user = await User.findByPk(id);
