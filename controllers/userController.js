@@ -1,7 +1,7 @@
 const User = require('../models/User');
 
 module.exports = {
-  getAllUsers: async (req, res) => {
+  async getAllUsers(req, res) {
     try {
       const users = await User.findAll();
       res.json(users);
@@ -11,7 +11,7 @@ module.exports = {
     }
   },
 
-  getUserById: async (req, res) => {
+ async getUserById(req, res) {
     try {
       const { id } = req.params;
       const user = await User.findByPk(id);
@@ -25,7 +25,7 @@ module.exports = {
     }
   },
 
-  createUser: async (req, res) => {
+  async createUser(req, res)  {
     try {
       const { email, password } = req.body;
       const user = await User.create({ email, password });
@@ -54,7 +54,7 @@ module.exports = {
     }
   },
 
-  deleteUser: async (req, res) => {
+  async deleteUser(req, res) {
     try {
       const { id } = req.params;
       const user = await User.findByPk(id);
