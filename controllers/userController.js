@@ -36,7 +36,7 @@ module.exports = {
     }
   },
 
-  updateUser: async (req, res) => {
+  async updateUser(req, res) {
     try {
       const { id } = req.params;
       const { email, password } = req.body;
