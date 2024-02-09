@@ -3,7 +3,7 @@ const { Menu } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // GET all menus
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const menuData = await Menu.findAll();
         res.json(menuData);
