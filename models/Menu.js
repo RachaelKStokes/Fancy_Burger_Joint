@@ -1,39 +1,39 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js');
+// const { Model, DataTypes } = require('sequelize');
+// const sequelize = require('../config/connection.js');
 
-class Menu extends Model {}
+// class Menu extends Model {}
 
-Menu.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
+// Menu.init(
+//   {
+//     id: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false,
+//       primaryKey: true,
+//       autoIncrement: true
+//     },
 
-    item_name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
+//     item_name: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     },
 
-    item_price: {
-      type: DataTypes.DECIMAL,
-      allowNull: false
-    },
+//     item_price: {
+//       type: DataTypes.DECIMAL,
+//       allowNull: false
+//     },
 
-    item_description: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'menu',
-  }
-);
+//     item_description: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     }
+//   },
+//   {
+//     sequelize,
+//     timestamps: false,
+//     freezeTableName: true,
+//     underscored: true,
+//     modelName: 'menu',
+//   }
+// );
 
-module.exports = Menu;
+// module.exports = Menu;
