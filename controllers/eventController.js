@@ -1,7 +1,7 @@
 const Event = require('../models/Event');
 
 module.exports = {
-   async getAllEvents  (req, res) {
+  async getAllEvents  (req, res) {
     try {
       const events = await Event.findAll();
       res.json(events);
@@ -11,7 +11,7 @@ module.exports = {
     }
   },
 
-   async getEventById(req, res) {
+  async getEventById(req, res) {
     try {
       const { id } = req.params;
       const event = await Event.findByPk(id);
