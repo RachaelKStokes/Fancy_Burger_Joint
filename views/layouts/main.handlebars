@@ -4,19 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salt & Sage</title>
+  <title> SALT & SAGE </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <link rel="stylesheet" href="/css/default.css">
 </head>
 
 <body>
-  <div class="container">
+  {{!-- <div class="container"> --}}
     <nav>
-      <a href="/">Login</a>
+      <a href="/">Home</a>
+      <a href="/menu">Menu</a>
+      {{#if loggedIn}}
+      <a href="/reservation">Reservation</a>
+      {{/if}}
+      {{#if loggedIn}}
       <a href="/logout">Logout</a>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
     </nav>
+    <div class="main-content">
+
     {{{body}}}
-  </div>
+    </div>
+  {{!-- </div> --}}
 </body>
 
 </html>

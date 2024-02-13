@@ -12,11 +12,22 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/menu', withAuth, async (req, res) => {
+router.get('/menu', async (req, res) => {
   try {
     res.render('menu', {
       loggedIn: req.session.loggedIn,
     });
+  } catch (err) {
+    res.status(500).redirect('/login');
+  }
+});
+
+router.get('/reservation', withAuth, async (req, res) => {
+  try {
+
+    res.render('reservation', {
+      loggedIn: req.session.loggedIn,
+    })
   } catch (err) {
     res.status(500).redirect('/login');
   }
