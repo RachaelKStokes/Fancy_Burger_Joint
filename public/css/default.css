@@ -1,7 +1,7 @@
 /**
  * Theme: default
  */
- :root {
+:root {
   --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
@@ -199,7 +199,7 @@ kbd {
 
 [data-theme=light],
 :root:not([data-theme=dark]) {
-  --background-color: #fff;
+  --background-color: #d1ffea;
   --color: hsl(205, 20%, 32%);
   --h1-color: hsl(205, 30%, 15%);
   --h2-color: #24333e;
@@ -209,12 +209,12 @@ kbd {
   --h6-color: #4d606d;
   --muted-color: hsl(205, 10%, 50%);
   --muted-border-color: hsl(205, 20%, 94%);
-  --primary: hsl(195, 85%, 41%);
-  --primary-hover: hsl(195, 90%, 32%);
+  --primary: hsl(152, 36%, 51%);
+  --primary-hover: hsl(152, 35%, 32%);
   --primary-focus: rgba(16, 149, 193, 0.125);
   --primary-inverse: #fff;
-  --secondary: hsl(205, 15%, 41%);
-  --secondary-hover: hsl(205, 20%, 32%);
+  --secondary: hsl(0, 82%, 79%);
+  --secondary-hover: hsl(0, 72%, 69%);
   --secondary-focus: rgba(89, 107, 120, 0.125);
   --secondary-inverse: #fff;
   --contrast: hsl(205, 30%, 15%);
@@ -230,7 +230,7 @@ kbd {
   --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --form-element-background-color: transparent;
-  --form-element-border-color: hsl(205, 14%, 68%);
+  --form-element-border-color: hsl(152, 36%, 51%);
   --form-element-color: var(--color);
   --form-element-placeholder-color: var(--muted-color);
   --form-element-active-background-color: transparent;
@@ -277,7 +277,7 @@ kbd {
     0.2085rem 0.417rem 2.502rem rgba(27, 40, 50, 0.04302),
     0.5rem 1rem 6rem rgba(27, 40, 50, 0.06),
     0 0 0 0.0625rem rgba(27, 40, 50, 0.015);
-  --card-sectionning-background-color: #fbfbfc;
+  --card-sectionning-background-color: #f0dddd;
   --dropdown-background-color: #fbfbfc;
   --dropdown-border-color: #e1e6eb;
   --dropdown-box-shadow: var(--card-box-shadow);
