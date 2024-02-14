@@ -2,11 +2,7 @@
 
 ## Description
 
-In this project we worked together as a group to create a website for our restaurant "Salt & Sage". We used Node.js and Express.js to create a RESTful API, utilized Handlebars.js as a template engine, created and seeded our database using Sequalize, and used the GET and POST methods to retrieve and add new data. 
-
-We used the MVC paradime to organize our file and folder structure. To ensure the users information is protected we empleminted bcrypt to encode the users password and used an environment variable to protect API keys and sensitive information from attackers.
-
-The application uses express-session to authenticate users via a login so that they can create a reservation.
+In this project we worked together as a group to create a website for our restaurant "Salt & Sage". We used Node.js and Express.js to create a RESTful API, utilized Handlebars.js as a template engine, created and seeded our database using Sequalize, and used the GET and POST methods to retrieve and add new data. We used the MVC paradime to organize our file and folder structure. To ensure the users information is protected we empleminted bcrypt to encode the users password and used an environment variable to protect API keys and sensitive information from attackers. The application uses express-session to authenticate users via a login so that they can create a reservation.
 
 ## Usage
 
@@ -17,7 +13,7 @@ Users can view the homepage which includes pictures of products and the restaura
 - Node.js
 - Express.js
 - Handlebars.js
-- Sequalize
+- Sequelize
 - Bcrypt
 - Express-Session
 - Pico.css
