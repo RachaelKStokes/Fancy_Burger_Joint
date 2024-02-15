@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Menu } = require('../../models');
-const withAuth = require('../../utils/auth');
 
 // GET all menus
 router.get('/', async (req, res) => {
@@ -29,7 +28,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // POST a new menu
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const menuData = await Menu.create(req.body);
         res.status(200).json(menuData);
@@ -39,7 +38,7 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // PUT (update) a menu
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const menuData = await Menu.update(req.body, {
             where: {
@@ -57,7 +56,7 @@ router.put('/:id', withAuth, async (req, res) => {
 });
 
 // DELETE a menu
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const menuData = await Menu.destroy({
             where: {
