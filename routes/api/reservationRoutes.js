@@ -31,7 +31,11 @@ router.get('/:id', async (req, res) => {
 // POST a new reservation
 router.post('/', async (req, res) => {
     try {
-        const reservationData = await Reservation.create(req.body);
+        const reservationData = await Reservation.create({
+            reservation_date: req.body.date,
+            reservation_time: req.body.time,
+            reservation_guests: req.body.guests,
+        });
         res.status(200).json(reservationData);
     } catch (err) {
         res.status(500).json({ error: 'Failed to create a reservation!'});
