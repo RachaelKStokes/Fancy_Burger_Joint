@@ -5,13 +5,10 @@
   "main": "server.js",
   "scripts": {
     "launch": "npm install && npm run watch",
-    "prestart": "node config/init",
     "start": "node server",
-    "preseed": "node config/init seed",
     "seed": "node seeds/index",
     "prewatch": "node config/init",
-    "watch": "nodemon server",
-    "postinstall": "cp ./.env.example ./.env"
+    "watch": "nodemon server"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +22,7 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
+    "node": "^21.6.1",
     "sequelize": "^6.3.5"
-  },
-  "devDependencies": {}
+  }
 }
