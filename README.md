@@ -30,4 +30,4 @@ Users can view the homepage which includes pictures of products and the restaura
 ![Screenshot of Salt & Sage menu](./screenshots/SALT%20&%20SAGE%20(1).png)
 
 ## Deployed Application
-[Link to deployed site]
+[Link to deployed site](https://nameless-sierra-99931-c6028d0b78d3.herokuapp.com/)
